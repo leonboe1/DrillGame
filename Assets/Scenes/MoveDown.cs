@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveDown : MonoBehaviour
 {
 
-    public float speed = 5f;
+    public float speed = 10f;
     public float curveSpeed = 100f;
 
     // Start is called before the first frame update
@@ -18,7 +18,7 @@ public class MoveDown : MonoBehaviour
     void FixedUpdate()
     {
         float curveDirection = Input.GetKey(KeyCode.Space) ? 1 : -1;
-        transform.position += transform.up * -speed * Time.deltaTime;
+
         transform.Rotate(Vector3.forward * curveDirection * curveSpeed * Time.deltaTime);
         transform.position += transform.up * -speed * Time.deltaTime;
     }
