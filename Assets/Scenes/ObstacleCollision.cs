@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class ObstacleCollision : MonoBehaviour
 {
+
+    public Grid grid;
+    public Tilemap tilemap;
 
     public float blinkTime = 0.1f;
     public Color blinkColor = Color.red;
@@ -21,10 +25,12 @@ public class ObstacleCollision : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Vector3Int position = grid.WorldToCell(transform.position);
+        tilemap.SetTile(position, null);
     }
 
     void OnCollisionEnter2D(Collision2D collision) {
+
         StartCoroutine(Blink());
     }
 
