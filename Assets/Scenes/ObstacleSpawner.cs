@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class ObstacleSpawner : MonoBehaviour
 {
-    public GameObject boxPrefab;
-    public float spawnRate = 1f;
-    public float spawnRadius = 5f;
+    public GameObject binPrefab;
+    public GameObject stonePrefab;
 
+    public float spawnRate = 1f;
     private float nextSpawnTime = 0f;
 
     private float boxHeight;
@@ -24,12 +24,7 @@ public class ObstacleSpawner : MonoBehaviour
             Vector3 spawnPosition = Camera.main.ViewportToWorldPoint(new Vector3(Random.Range(0.1f, 0.9f), 0, 10f));
             spawnPosition.y -= boxHeight;
 
-            GameObject box = Instantiate(boxPrefab, spawnPosition, Quaternion.identity);
-
-            if (Random.value > 0.5f)
-            {
-                box.GetComponent<SpriteRenderer>().color = Color.green;
-            }
+            GameObject box = Instantiate(Random.value > 0.5f ? binPrefab : stonePrefab, spawnPosition, Quaternion.identity);
             
             nextSpawnTime = Time.time + 1f / spawnRate;
         }

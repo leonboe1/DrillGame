@@ -1181,9 +1181,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad18763090f2b48ecbbf3e510d374d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxPrefab: {fileID: 286748225}
-  spawnRate: 1
-  spawnRadius: 5
+  binPrefab: {fileID: 286748225}
+  stonePrefab: {fileID: 386816593}
+  spawnRate: 0.5
 --- !u!1 &1317635187
 GameObject:
   m_ObjectHideFlags: 0
