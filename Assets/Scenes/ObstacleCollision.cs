@@ -25,12 +25,13 @@ public class ObstacleCollision : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3Int position = grid.WorldToCell(transform.position);
-        tilemap.SetTile(position, null);
+        if(DrillMover.gameStarted) {
+            Vector3Int position = grid.WorldToCell(transform.position);
+            tilemap.SetTile(position, null);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision) {
-
         StartCoroutine(Blink());
     }
 

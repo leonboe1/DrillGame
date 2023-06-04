@@ -14,12 +14,11 @@ public class ObstacleSpawner : MonoBehaviour
 
     void Start() {
         boxHeight = gameObject.GetComponent<Renderer>().bounds.size.y;
-        Debug.Log(boxHeight);
     }
 
     void Update()
     {
-        if (Time.time >= nextSpawnTime)
+        if (DrillMover.gameStarted && Time.time >= nextSpawnTime)
         {
             Vector3 spawnPosition = Camera.main.ViewportToWorldPoint(new Vector3(Random.Range(0.1f, 0.9f), 0, 10f));
             spawnPosition.y -= boxHeight;
