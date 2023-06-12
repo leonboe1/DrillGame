@@ -18,12 +18,14 @@ public class ObstacleSpawner : MonoBehaviour
 
     void Update()
     {
-        if (DrillMover.gameStarted && Time.time >= nextSpawnTime)
+        if (Time.time >= nextSpawnTime)
         {
             Vector3 spawnPosition = Camera.main.ViewportToWorldPoint(new Vector3(Random.Range(0.1f, 0.9f), 0, 10f));
             spawnPosition.y -= boxHeight;
 
             GameObject box = Instantiate(Random.value > 0.5f ? binPrefab : stonePrefab, spawnPosition, Quaternion.identity);
+
+            box.GetComponent<Collider2D>().enabled = true;
             
             nextSpawnTime = Time.time + 1f / spawnRate;
         }
