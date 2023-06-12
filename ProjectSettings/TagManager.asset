@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Obstacle
+  - Heart1
+  - Heart2
+  - Heart3
   layers:
   - Default
   - TransparentFX

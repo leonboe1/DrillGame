@@ -487,7 +487,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Welcome TO <color=#feae34>D.R.I.L.L.</color> \n\nMove the drill with your
+  m_Text: "Welcome to <color=#feae34>D.R.I.L.L.</color> \n\nMove the drill with your
     space bar. \n\nSTART >"
 --- !u!222 &549883547
 CanvasRenderer:

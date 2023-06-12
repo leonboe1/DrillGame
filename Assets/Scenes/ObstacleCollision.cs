@@ -19,6 +19,8 @@ public class ObstacleCollision : MonoBehaviour
     private int hits = 0;
     private int life = 3;
 
+    private List<GameObject> collidedObjects = new List<GameObject>();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +32,7 @@ public class ObstacleCollision : MonoBehaviour
     void Update()
     {
 
-        // Reached corex
+        // Reached core
         if(transform.position.y < -100) {
             SceneManager.LoadScene("MainMenu");
         }
@@ -40,21 +42,31 @@ public class ObstacleCollision : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D collision) {
-        hits++;
 
-        float percentage = (float)hits/(float)life;
-
-        Color newColor = new Color(1, 1 - percentage, 1 - percentage, 1);
-        
-        drillRenderer.color = newColor;
-
-        if (collision.gameObject.CompareTag("Obstacle"))
+        if (collidedObjects.Contains(collision.gameObject))
         {
-            collision.gameObject.GetComponent<Collider2D>().enabled = false;
+            return;
         }
 
+        if(collision.gameObject.CompareTag("Obstacle")) {
+            collidedObjects.Add(collision.gameObject);
+        }
+            
+        GameObject heart = GameObject.FindWithTag("Heart"+(3-hits));
+
+        Material material = heart.GetComponent<Renderer>().material;
+
+        // Ändere die Transparenz des Materials
+        Color color = material.color;
+        color.a = 0.3f;
+        material.color = color;
+
+        hits++;
+
+        StartCoroutine(Blink());
+
         if(hits == life) {
-            StartCoroutine(Blink());
+             SceneManager.LoadScene("MainMenu");
         }
     }
 
@@ -68,11 +80,5 @@ public class ObstacleCollision : MonoBehaviour
         drillRenderer.color = blinkColor;
         yield return new WaitForSeconds(blinkTime / 2);
         drillRenderer.color = originalColor;
-        drillRenderer.color = blinkColor;
-        yield return new WaitForSeconds(blinkTime / 2);
-        drillRenderer.color = originalColor;
-        
-
-        SceneManager.LoadScene("MainMenu");
     }
 }
