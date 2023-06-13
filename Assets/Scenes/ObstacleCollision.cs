@@ -63,15 +63,15 @@ public class ObstacleCollision : MonoBehaviour
 
         hits++;
 
-        StartCoroutine(Blink());
-
-        if(hits == life) {
-             SceneManager.LoadScene("MainMenu");
-        }
+        StartCoroutine(Blink(hits == life));
     }
 
-    IEnumerator Blink()
+    IEnumerator Blink(bool isDone)
     {
+
+        if(isDone) {
+            DrillMover.gameOver = true;
+        }
 
         drillRenderer.color = blinkColor;
         yield return new WaitForSeconds(blinkTime / 2);
@@ -80,5 +80,10 @@ public class ObstacleCollision : MonoBehaviour
         drillRenderer.color = blinkColor;
         yield return new WaitForSeconds(blinkTime / 2);
         drillRenderer.color = originalColor;
+
+        if(isDone) {
+            DrillMover.gameOver = false;
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 }

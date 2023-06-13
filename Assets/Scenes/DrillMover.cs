@@ -8,6 +8,8 @@ public class DrillMover : MonoBehaviour
     public float speed = 10f;
     public float curveSpeed = 100f;
 
+    public static bool gameOver = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,10 @@ public class DrillMover : MonoBehaviour
     void FixedUpdate()
     {
         
+         if(gameOver) {
+            return;
+        }
+
         // Move forward according to curve direction
         float curveDirection = Input.GetKey(KeyCode.Space) ? 1 : -1;
         transform.Rotate(Vector3.forward * curveDirection * curveSpeed * Time.deltaTime);
