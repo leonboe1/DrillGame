@@ -8,6 +8,7 @@ TagManager:
   - Heart1
   - Heart2
   - Heart3
+  - WinLostText
   layers:
   - Default
   - TransparentFX

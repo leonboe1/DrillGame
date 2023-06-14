@@ -4,6 +4,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ObstacleCollision : MonoBehaviour
 {
@@ -57,6 +58,7 @@ public class ObstacleCollision : MonoBehaviour
 
         if(isDone) {
             DrillMover.gameOver = true;
+            GameObject.FindWithTag("WinLostText").GetComponent<Text>().text = "You Lost!";
         }
 
         drillRenderer.color = blinkColor;
@@ -68,6 +70,7 @@ public class ObstacleCollision : MonoBehaviour
         drillRenderer.color = originalColor;
 
         if(isDone) {
+            yield return new WaitForSeconds(1);
             DrillMover.gameOver = false;
             SceneManager.LoadScene("MainMenu");
         }

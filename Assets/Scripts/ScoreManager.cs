@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -16,7 +17,15 @@ public class ScoreManager : MonoBehaviour
     {
         // Reached core
         if(transform.position.y < -500) {
-            SceneManager.LoadScene("MainMenu");
+            StartCoroutine(Won());
         }
+    }
+
+    IEnumerator Won()
+    {
+        DrillMover.gameOver = true;
+        GameObject.FindWithTag("WinLostText").GetComponent<Text>().text = "You Won!";
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("MainMenu");
     }
 }
