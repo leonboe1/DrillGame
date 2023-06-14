@@ -15,7 +15,7 @@ public class ScoreManager : MonoBehaviour
     void Update()
     {
         // Reached core
-        if(transform.position.y < -100) {
+        if(transform.position.y < -500) {
             SceneManager.LoadScene("MainMenu");
         }
     }
