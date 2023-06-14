@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.SceneManagement;
@@ -7,8 +8,6 @@ using UnityEngine.SceneManagement;
 public class ObstacleCollision : MonoBehaviour
 {
 
-    public Grid grid;
-    public Tilemap tilemap;
 
     public float blinkTime = 0.1f;
     public Color blinkColor = Color.red;
