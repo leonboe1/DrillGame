@@ -27,19 +27,6 @@ public class ObstacleCollision : MonoBehaviour
         originalColor = drillRenderer.color;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-        // Reached core
-        if(transform.position.y < -100) {
-            SceneManager.LoadScene("MainMenu");
-        }
-
-        Vector3Int position = grid.WorldToCell(transform.position);
-        tilemap.SetTile(position, null);
-    }
-
     void OnCollisionEnter2D(Collision2D collision) {
 
         if (collidedObjects.Contains(collision.gameObject))

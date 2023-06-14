@@ -35,7 +35,7 @@ public class TileManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (DrillMover.gameStarted)
+        if (!DrillMover.gameOver)
         {
             //update to other rock layer after passing a milestone
             for (int i = 0; i < mileStones.Length; i++)
@@ -58,11 +58,7 @@ public class TileManager : MonoBehaviour
 
             Vector3Int position = grid.WorldToCell(transform.position);
             tilemap.SetTile(position, null);
-
         }
-
-
-
     }
 
     //delete a row of tiles above the specified row
