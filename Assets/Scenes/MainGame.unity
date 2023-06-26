@@ -1331,6 +1331,7 @@ Transform:
   - {fileID: 395824383}
   - {fileID: 1845332366}
   - {fileID: 1887049614}
+  - {fileID: 1617467327}
   m_Father: {fileID: 1820122426}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1347,17 +1348,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drill: {fileID: 1187256002}
-  mileStones: 140000005000000096000000c8000000f000000018010000680100009a010000d6010000
+  mileStones: 140000005000000096000000c8000000d20000002c0100007c010000d6010000
   mileStonesText:
   - 'Bald koennen wir alle auf den Mond! '
-  - ZuckCoorp wird durch Sie ein besseres Leben ermoeglichen.
   - Ausgezeichnet.. Der Plan wird aufgehen!
-  - "Immer sch\xF6n weiter so.. Muhahahah"
+  - Immer schoen weiter so.. Muhahahah
   - 'Di.. Ve..bind.ng is. s.lecht.. '
-  - Haha ich mach nur nur Spass, WEITER!
-  - "Wird ganz sch\xF6n heiss da unten, oder?"
+  - Haha ich mach nur nur Spass, WEITERMACHEN!
+  - Wird ganz schoen heiss da unten, oder?
   - "M\xF6ge die Weltherrschaft.. ich meine Mondherrschaft kommen!"
-  - Endlich. Ich steige dann schon mal in die Rakete. Adios!
+  - Ich steige dann schon mal in die Rakete. Adios, Dr. Ill!
+  audioClipArray:
+  - {fileID: 8300000, guid: 2456024d9fbd8ad478468b8c8cbb1099, type: 3}
+  - {fileID: 8300000, guid: 3a31d758c50fdc84d9e36de86a7c9ec5, type: 3}
+  - {fileID: 8300000, guid: 669ecbfd82efe02478e3fafa235d3e10, type: 3}
+  - {fileID: 8300000, guid: b7345435987a55a42bb6f8196890e9d3, type: 3}
+  - {fileID: 8300000, guid: 3d65b11d187e78b49b78ef422188d463, type: 3}
+  - {fileID: 8300000, guid: a0bd06776d1c18a4991c506ceaf92a31, type: 3}
+  - {fileID: 8300000, guid: f6c43fe9005d358489818e509419e444, type: 3}
+  - {fileID: 8300000, guid: 965a507fbada02a46907fd511faaab3f, type: 3}
+  audioSource: {fileID: 1617467328}
   displayDuration: 3
   animationSpeed: 0
 --- !u!1 &949066483
@@ -2372,6 +2382,134 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1617467326
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1617467327}
+  - component: {fileID: 1617467328}
+  m_Layer: 0
+  m_Name: Audio Source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1617467327
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617467326}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 428.4483, y: 94.68533, z: -1.0224721}
+  m_LocalScale: {x: 1.1265348, y: 1.1265348, z: 1.1265348}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 903703530}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1617467328
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617467326}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1631394471
 GameObject:
   m_ObjectHideFlags: 0
@@ -6222,7 +6360,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.8
-  m_Text: "\rZuckCoorp wird durch Sie ein besseres Leben erm\xF6glichen."
+  m_Text: MilesStoneText
 --- !u!222 &1845332368
 CanvasRenderer:
   m_ObjectHideFlags: 0

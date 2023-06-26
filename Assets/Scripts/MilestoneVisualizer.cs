@@ -13,7 +13,9 @@ public class MilestoneVisualizer : MonoBehaviour
     //TODO retrieve milestone var from a common source
     //public TileManager tileManager;
     public int[] mileStones = new int[10];
-    public String[] mileStonesText = new String[10];
+    public String[] mileStonesText = new String[10]; 
+    public AudioClip[] audioClipArray;
+    public AudioSource audioSource;
     public float displayDuration;
     public float animationSpeed;
     
@@ -38,7 +40,7 @@ public class MilestoneVisualizer : MonoBehaviour
         {
             if (currentMilestone < mileStones.Length && -drill.transform.position.y >= mileStones[currentMilestone])
             {
-                DisplayMilestone();
+                HandleMilestone();
                 currentMilestone++;
             }
         } else
@@ -60,11 +62,12 @@ public class MilestoneVisualizer : MonoBehaviour
         //gameObject.transform.Translate(1, 0, 0);
     }
 
-    void DisplayMilestone()
+    void HandleMilestone()
     {
         //pick text and set
         // use Time.fixedTime && drill.transform.position.y Random.value
         milestoneText.text = mileStonesText[currentMilestone];
+        audioSource.PlayOneShot(audioClipArray[currentMilestone]);
 
         //reset time
         remainingDisplayDuration = displayDuration;
