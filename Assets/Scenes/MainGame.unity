@@ -1347,8 +1347,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drill: {fileID: 1187256002}
-  mileStones: 1400000032000000c8000000
-  displayDuration: 0
+  mileStones: 140000005000000096000000c8000000f000000018010000680100009a010000d6010000
+  mileStonesText:
+  - 'Bald koennen wir alle auf den Mond! '
+  - ZuckCoorp wird durch Sie ein besseres Leben ermoeglichen.
+  - Ausgezeichnet.. Der Plan wird aufgehen!
+  - "Immer sch\xF6n weiter so.. Muhahahah"
+  - 'Di.. Ve..bind.ng is. s.lecht.. '
+  - Haha ich mach nur nur Spass, WEITER!
+  - "Wird ganz sch\xF6n heiss da unten, oder?"
+  - "M\xF6ge die Weltherrschaft.. ich meine Mondherrschaft kommen!"
+  - Endlich. Ich steige dann schon mal in die Rakete. Adios!
+  displayDuration: 3
   animationSpeed: 0
 --- !u!1 &949066483
 GameObject:
