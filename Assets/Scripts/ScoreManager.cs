@@ -25,7 +25,19 @@ public class ScoreManager : MonoBehaviour
     {
         DrillMover.gameOver = true;
         GameObject.FindWithTag("WinLostText").GetComponent<Text>().text = "You Won!";
+          
+        // Finde das GameObject mit dem Tag "Score" und hole dessen Text-Komponente
+        Text scoreText = GameObject.FindGameObjectWithTag("Score").GetComponent<Text>();
+
+        int currentScore = int.Parse(scoreText.text);
+
+        if(currentScore > PlayerPrefs.GetInt("Score", 0)) {
+            // Speichere den aktuellen Score persistent ab
+            PlayerPrefs.SetInt("Score", currentScore);
+        }
+
         yield return new WaitForSeconds(2);
+        DrillMover.gameOver = false;
         SceneManager.LoadScene("MainMenu");
     }
 }

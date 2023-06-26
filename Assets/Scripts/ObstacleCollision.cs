@@ -19,6 +19,8 @@ public class ObstacleCollision : MonoBehaviour
     private int life = 3;
 
     private List<GameObject> collidedObjects = new List<GameObject>();
+    
+    private bool ignoresHits = false;
 
     // Start is called before the first frame update
     void Start()
@@ -29,10 +31,12 @@ public class ObstacleCollision : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision) {
 
-        if (collidedObjects.Contains(collision.gameObject))
+        if (collidedObjects.Contains(collision.gameObject) || ignoresHits)
         {
             return;
         }
+        
+        ignoresHits = true; // invincible for blinking time
 
         if(collision.gameObject.CompareTag("Obstacle")) {
             collidedObjects.Add(collision.gameObject);
@@ -54,12 +58,12 @@ public class ObstacleCollision : MonoBehaviour
 
     IEnumerator Blink(bool isDone)
     {
-
+    
         if(isDone) {
             DrillMover.gameOver = true;
             GameObject.FindWithTag("WinLostText").GetComponent<Text>().text = "You Lost!";
         }
-
+        
         drillRenderer.color = blinkColor;
         yield return new WaitForSeconds(blinkTime / 2);
         drillRenderer.color = originalColor;
@@ -67,6 +71,8 @@ public class ObstacleCollision : MonoBehaviour
         drillRenderer.color = blinkColor;
         yield return new WaitForSeconds(blinkTime / 2);
         drillRenderer.color = originalColor;
+        
+        ignoresHits = false;
 
         if(isDone) {
         
