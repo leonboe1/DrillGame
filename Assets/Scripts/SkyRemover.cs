@@ -2,23 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BorderMover : MonoBehaviour
+public class SkyRemover : MonoBehaviour
 {
-
     public GameObject drill;
-    private int startPosition;
+    public float deleteAboveY = 10f;
     // Start is called before the first frame update
     void Start()
     {
-        startPosition = (int)transform.position.y;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(drill.transform.position.y < startPosition)
+        if(0 > drill.transform.position.y + deleteAboveY)
         {
-            transform.position = new Vector3(transform.position.x, drill.transform.position.y, 0);
+            Destroy(gameObject);
         }
     }
+
+
 }
