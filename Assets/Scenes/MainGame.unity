@@ -1309,8 +1309,9 @@ GameObject:
   m_Component:
   - component: {fileID: 903703530}
   - component: {fileID: 903703531}
+  - component: {fileID: 903703532}
   m_Layer: 5
-  m_Name: ZarkMessengeBoard
+  m_Name: ZarkMessengerBoard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1324,7 +1325,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 903703529}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -346, y: 120, z: 0}
+  m_LocalPosition: {x: -753, y: 120, z: 0}
   m_LocalScale: {x: 0.72661215, y: 0.72661215, z: 0.72661215}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1348,7 +1349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drill: {fileID: 1187256002}
-  mileStones: 140000005000000096000000c8000000d20000002c0100007c010000d6010000
+  mileStones: 140000005000000096000000c8000000d70000002c0100007c010000d6010000
   mileStonesText:
   - 'Bald koennen wir alle auf den Mond! '
   - Ausgezeichnet.. Der Plan wird aufgehen!
@@ -1368,8 +1369,27 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f6c43fe9005d358489818e509419e444, type: 3}
   - {fileID: 8300000, guid: 965a507fbada02a46907fd511faaab3f, type: 3}
   audioSource: {fileID: 1617467328}
-  displayDuration: 3
-  animationSpeed: 0
+--- !u!95 &903703532
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903703529}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d9c030971becf9847ac25d7e84642214, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &949066483
 GameObject:
   m_ObjectHideFlags: 0

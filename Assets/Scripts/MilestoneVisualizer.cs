@@ -10,27 +10,21 @@ using UnityEngine.UI;
 public class MilestoneVisualizer : MonoBehaviour
 {
     public GameObject drill;
-    //TODO retrieve milestone var from a common source
-    //public TileManager tileManager;
     public int[] mileStones = new int[10];
     public String[] mileStonesText = new String[10]; 
     public AudioClip[] audioClipArray;
     public AudioSource audioSource;
-    public float displayDuration;
-    public float animationSpeed;
     
     private Text milestoneText;
+    private Animator animator;
     private int currentMilestone = 0;
     private bool shown = false;
-    private float remainingDisplayDuration = 0;
-    private float hidingOffset = 600;
 
     // Start is called before the first frame update
     void Start()
     {
         milestoneText = this.gameObject.GetComponentInChildren<Text>();
-        //move out of screen
-        gameObject.transform.Translate(-hidingOffset, 0, 0);
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -43,47 +37,23 @@ public class MilestoneVisualizer : MonoBehaviour
                 HandleMilestone();
                 currentMilestone++;
             }
-        } else
-        {
-            //update timer
-            remainingDisplayDuration -= Time.deltaTime;
-
-            //hide if timer ran out
-            if(remainingDisplayDuration <= 0)
-            {
-                HideMilestone();
-            }
         }
     }
 
     private void FixedUpdate()
     {
-        //TODO animation
-        //gameObject.transform.Translate(1, 0, 0);
+        shown = animator.GetCurrentAnimatorStateInfo(0).IsName("Shown");
     }
 
     void HandleMilestone()
     {
         //pick text and set
-        // use Time.fixedTime && drill.transform.position.y Random.value
         milestoneText.text = mileStonesText[currentMilestone];
+
+        //display textboard by playing the animation
+        animator.SetTrigger("ShowZarkMessengerBoard");
+
+        //play audio commentary
         audioSource.PlayOneShot(audioClipArray[currentMilestone]);
-
-        //reset time
-        remainingDisplayDuration = displayDuration;
-
-        //display
-        ShowMilestone();
-    }
-
-    void ShowMilestone()
-    {
-        shown = true;
-        gameObject.transform.Translate(hidingOffset, 0, 0);
-    }
-    void HideMilestone()
-    {
-        shown = false;
-        gameObject.transform.Translate(-hidingOffset, 0, 0);
     }
 }
