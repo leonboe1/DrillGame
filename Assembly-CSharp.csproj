@@ -61,11 +61,11 @@
     <Compile Include="Assets\Scripts\ObstacleSpawner.cs" />
     <Compile Include="Assets\Scripts\StartButtonHandler.cs" />
     <Compile Include="Assets\Scripts\DrillMover.cs" />
+    <Compile Include="Assets\Scripts\ObjectsMover.cs" />
     <Compile Include="Assets\Scripts\ScoreManager.cs" />
     <Compile Include="Assets\Scripts\TileSpawner.cs" />
+    <Compile Include="Assets\Scripts\SkyRemover.cs" />
     <Compile Include="Assets\Scripts\ObstacleCollision.cs" />
-    <Compile Include="Assets\Scripts\BorderMover.cs" />
-    <Compile Include="Assets\Scripts\MilestoneVisualizer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

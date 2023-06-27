@@ -302,8 +302,9 @@ GameObject:
   - component: {fileID: 1082560163}
   - component: {fileID: 1082560165}
   - component: {fileID: 1082560164}
+  - component: {fileID: 1082560166}
   m_Layer: 5
-  m_Name: StartButton
+  m_Name: StartButton/Highscore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -464,6 +465,19 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
+--- !u!114 &1082560166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082560158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19ef7f4518c5a4356a5af5b9eca53e7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 1082560160}
 --- !u!1 &1482181489
 GameObject:
   m_ObjectHideFlags: 0

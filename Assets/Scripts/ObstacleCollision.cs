@@ -9,7 +9,6 @@ using UnityEngine.UI;
 public class ObstacleCollision : MonoBehaviour
 {
 
-
     public float blinkTime = 0.1f;
     public Color blinkColor = Color.red;
 
@@ -20,6 +19,8 @@ public class ObstacleCollision : MonoBehaviour
     private int life = 3;
 
     private List<GameObject> collidedObjects = new List<GameObject>();
+    
+    private bool ignoresHits = false;
 
     // Start is called before the first frame update
     void Start()
@@ -30,10 +31,12 @@ public class ObstacleCollision : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision) {
 
-        if (collidedObjects.Contains(collision.gameObject))
+        if (collidedObjects.Contains(collision.gameObject) || ignoresHits)
         {
             return;
         }
+        
+        ignoresHits = true; // invincible for blinking time
 
         if(collision.gameObject.CompareTag("Obstacle")) {
             collidedObjects.Add(collision.gameObject);
@@ -55,12 +58,12 @@ public class ObstacleCollision : MonoBehaviour
 
     IEnumerator Blink(bool isDone)
     {
-
+    
         if(isDone) {
             DrillMover.gameOver = true;
             GameObject.FindWithTag("WinLostText").GetComponent<Text>().text = "You Lost!";
         }
-
+        
         drillRenderer.color = blinkColor;
         yield return new WaitForSeconds(blinkTime / 2);
         drillRenderer.color = originalColor;
@@ -68,8 +71,21 @@ public class ObstacleCollision : MonoBehaviour
         drillRenderer.color = blinkColor;
         yield return new WaitForSeconds(blinkTime / 2);
         drillRenderer.color = originalColor;
+        
+        ignoresHits = false;
 
         if(isDone) {
+        
+            // Finde das GameObject mit dem Tag "Score" und hole dessen Text-Komponente
+            Text scoreText = GameObject.FindGameObjectWithTag("Score").GetComponent<Text>();
+        
+            int currentScore = int.Parse(scoreText.text);
+            
+            if(currentScore > PlayerPrefs.GetInt("Score", 0)) {
+                // Speichere den aktuellen Score persistent ab
+                PlayerPrefs.SetInt("Score", currentScore);
+            }
+        
             yield return new WaitForSeconds(1);
             DrillMover.gameOver = false;
             SceneManager.LoadScene("MainMenu");
