@@ -9,6 +9,7 @@ TagManager:
   - Heart2
   - Heart3
   - WinLostText
+  - Score
   layers:
   - Default
   - TransparentFX
