@@ -8,6 +8,9 @@ public class DifficultyButton : MonoBehaviour
     public Button difficultyButton;
     public Text difficultyButtonText;
     
+    public AudioClip sound;
+    public AudioSource audioSource;
+    
     // 0 = easy
     // 1 = normal
     // 2 = hard
@@ -27,6 +30,7 @@ public class DifficultyButton : MonoBehaviour
 
     public void button_pressed()
     {
+        audioSource.PlayOneShot(sound);
         difficultyLevel = (difficultyLevel + 1) % 3;
         LoadDifficultyString();
     }

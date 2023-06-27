@@ -9,6 +9,9 @@ using UnityEngine.UI;
 public class ObstacleCollision : MonoBehaviour
 {
 
+    public AudioClip sound;
+    public AudioSource audioSource;
+
     public float blinkTime = 0.1f;
     public Color blinkColor = Color.red;
 
@@ -35,6 +38,8 @@ public class ObstacleCollision : MonoBehaviour
         {
             return;
         }
+        
+        audioSource.PlayOneShot(sound);
         
         ignoresHits = true; // invincible for blinking time
 
