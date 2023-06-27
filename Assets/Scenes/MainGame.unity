@@ -1493,7 +1493,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   binPrefab: {fileID: 4609940536623554160, guid: 4301a2c885475414dace3c6832741fe7, type: 3}
   stonePrefab: {fileID: 1191839472384614210, guid: d7f453fd3fe1bf94b9d82531b6d997b8, type: 3}
-  spawnRate: 5
+  spawnRate: 3
   deleteAboveY: 10
 --- !u!70 &1187256016
 CapsuleCollider2D:
