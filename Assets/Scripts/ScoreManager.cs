@@ -16,7 +16,7 @@ public class ScoreManager : MonoBehaviour
     void Update()
     {
         // Reached core
-        if(transform.position.y <= -500) {
+        if(transform.position.y < -499) {
             StartCoroutine(Won());
         }
     }

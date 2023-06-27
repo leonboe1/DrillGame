@@ -378,7 +378,7 @@ GameObject:
   - component: {fileID: 1082560163}
   - component: {fileID: 1082560166}
   m_Layer: 5
-  m_Name: StartButton/Highscore
+  m_Name: Highscore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
