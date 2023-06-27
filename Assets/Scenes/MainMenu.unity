@@ -278,7 +278,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Welcome to <color=#feae34>D.R.I.L.L.</color> \n\nStart and Move with <color=#feae34>Space</color>."
+  m_Text: "Willkommen bei <color=#feae34>D.R.I.L.L.</color> \n\nStarten & Bewegen
+    mit <color=#feae34>Space</color>."
 --- !u!222 &549883547
 CanvasRenderer:
   m_ObjectHideFlags: 0

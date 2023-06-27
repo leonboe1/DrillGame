@@ -36,17 +36,17 @@ public class DifficultyButton : MonoBehaviour
     
     void LoadDifficultyString()
     {
-        var label = "Difficulty: ";
+        var label = "Schwierigkeit: ";
         
         switch(difficultyLevel) {
             case 0:
-                label = label + " Easy";
+                label = label + " Einfach";
                 break;
             case 1:
                 label = label + " Normal";
                 break;
             case 2:
-                label = label + " Hard";
+                label = label + " Schwer";
                 break;
         }
         

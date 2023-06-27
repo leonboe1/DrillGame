@@ -24,7 +24,7 @@ public class ScoreManager : MonoBehaviour
     IEnumerator Won()
     {
         DrillMover.gameOver = true;
-        GameObject.FindWithTag("WinLostText").GetComponent<Text>().text = "You Won!";
+        GameObject.FindWithTag("WinLostText").GetComponent<Text>().text = "Gewonnen!";
           
         // Finde das GameObject mit dem Tag "Score" und hole dessen Text-Komponente
         Text scoreText = GameObject.FindGameObjectWithTag("Score").GetComponent<Text>();

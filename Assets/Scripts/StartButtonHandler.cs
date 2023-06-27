@@ -26,7 +26,7 @@ public class StartButtonHandler : MonoBehaviour
 
     public void button_pressed()
     {
-        startButtonText.text = "Loading...";
+        startButtonText.text = "Laden...";
         SceneManager.LoadScene("MainGame");
     }
 }

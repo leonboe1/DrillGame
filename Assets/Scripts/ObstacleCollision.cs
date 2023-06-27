@@ -61,7 +61,7 @@ public class ObstacleCollision : MonoBehaviour
     
         if(isDone) {
             DrillMover.gameOver = true;
-            GameObject.FindWithTag("WinLostText").GetComponent<Text>().text = "You Lost!";
+            GameObject.FindWithTag("WinLostText").GetComponent<Text>().text = "Verloren!";
         }
         
         drillRenderer.color = blinkColor;
