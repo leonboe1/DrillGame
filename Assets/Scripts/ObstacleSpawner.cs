@@ -67,6 +67,8 @@ public class ObstacleSpawner : MonoBehaviour
 
         // Add to list of obstacles
         obstacles.Add(box);
+        
+        var spawnRate = 1 + (DifficultyButton.difficultyLevel*2);
 
         nextSpawnDepth -= 10f / spawnRate;
     }

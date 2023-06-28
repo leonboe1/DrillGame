@@ -9,6 +9,9 @@ public class StartButtonHandler : MonoBehaviour
 
     public Button startButton;
     public Text startButtonText;
+    
+    public AudioClip sound;
+    public AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +29,8 @@ public class StartButtonHandler : MonoBehaviour
 
     public void button_pressed()
     {
-        startButtonText.text = "Loading...";
+        audioSource.PlayOneShot(sound);
+        startButtonText.text = "Laden...";
         SceneManager.LoadScene("MainGame");
     }
 }

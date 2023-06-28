@@ -9,6 +9,9 @@ using UnityEngine.UI;
 public class ObstacleCollision : MonoBehaviour
 {
 
+    public AudioClip sound;
+    public AudioSource audioSource;
+
     public float blinkTime = 0.1f;
     public Color blinkColor = Color.red;
 
@@ -36,6 +39,8 @@ public class ObstacleCollision : MonoBehaviour
             return;
         }
         
+        audioSource.PlayOneShot(sound);
+        
         ignoresHits = true; // invincible for blinking time
 
         if(collision.gameObject.CompareTag("Obstacle")) {
@@ -61,7 +66,7 @@ public class ObstacleCollision : MonoBehaviour
     
         if(isDone) {
             DrillMover.gameOver = true;
-            GameObject.FindWithTag("WinLostText").GetComponent<Text>().text = "You Lost!";
+            GameObject.FindWithTag("WinLostText").GetComponent<Text>().text = "Verloren!";
         }
         
         drillRenderer.color = blinkColor;
