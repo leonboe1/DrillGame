@@ -13,7 +13,6 @@ public class DrillMover : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //StartCoroutine(Tremble());
     }
 
     void Update() 
@@ -53,15 +52,4 @@ public class DrillMover : MonoBehaviour
             }
         }
     }
-    
-    IEnumerator Tremble()
-    {
-    while (true)
-    {
-        transform.localPosition += new Vector3(0, 0.05f, 0);
-        yield return new WaitForSeconds(0.01f);
-        transform.localPosition -= new Vector3(0, 0.05f, 0);
-        yield return new WaitForSeconds(0.01f);
-    }
-}
 }

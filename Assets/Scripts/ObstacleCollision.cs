@@ -86,9 +86,9 @@ public class ObstacleCollision : MonoBehaviour
         
             int currentScore = int.Parse(scoreText.text);
             
-            if(currentScore > PlayerPrefs.GetInt("Score", 0)) {
+            if(currentScore > PlayerPrefs.GetInt("Score" + DifficultyButton.difficultyLevel, 0)) {
                 // Speichere den aktuellen Score persistent ab
-                PlayerPrefs.SetInt("Score", currentScore);
+                PlayerPrefs.SetInt("Score" + DifficultyButton.difficultyLevel, currentScore);
             }
         
             yield return new WaitForSeconds(1);
