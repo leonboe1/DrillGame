@@ -53,9 +53,9 @@ public class ScoreManager : MonoBehaviour
     
     while (true)
     {
-        transform.localPosition += new Vector3(0, 0.05f, 0);
+        transform.localPosition += new Vector3(0, 0.01f, 0);
         yield return new WaitForSeconds(0.01f);
-        transform.localPosition -= new Vector3(0, 0.05f, 0);
+        transform.localPosition -= new Vector3(0, 0.01f, 0);
         yield return new WaitForSeconds(0.01f);
     }
 }
