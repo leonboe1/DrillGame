@@ -94,7 +94,6 @@ public class TileManager : MonoBehaviour
             {
                 continue;
             }
-           
             tilemap.SetTile(position, currentTile); // Set the tile at the specified position
         }
     }
