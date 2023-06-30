@@ -6,8 +6,8 @@ using UnityEngine.Tilemaps;
 
 public class ObstacleSpawner : MonoBehaviour
 {
+    public GameObject bombPrefab;
     public GameObject binPrefab;
-    public GameObject stonePrefab;
     List<GameObject> obstacles = new List<GameObject>();
 
     public float spawnRate = 1f;
@@ -61,7 +61,7 @@ public class ObstacleSpawner : MonoBehaviour
         Vector3 spawnPosition = Camera.main.ViewportToWorldPoint(new Vector3(Random.Range(0.1f, 0.9f), 0, 10f));
         spawnPosition.y -= boxHeight;
 
-        GameObject box = Instantiate(Random.value > 0.5f ? binPrefab : stonePrefab, spawnPosition, Quaternion.identity);
+        GameObject box = Instantiate(Random.value > 0.5f ? bombPrefab : binPrefab, spawnPosition, Quaternion.identity);
 
         box.GetComponent<Collider2D>().enabled = true;
 
