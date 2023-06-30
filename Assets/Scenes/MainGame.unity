@@ -2379,9 +2379,9 @@ MonoBehaviour:
   deleteAboveY: 10
   mileStones: 64000000c80000002c01000090010000f4010000
   tiles:
-  - {fileID: 11400000, guid: 6d9f6271504ed412fa15d3717a4e8584, type: 2}
+  - {fileID: 11400000, guid: 3def562d68e744cb8970cb444c67a3f4, type: 2}
   - {fileID: 11400000, guid: 055d5b332028b4195a2c33788836b8d4, type: 2}
-  - {fileID: 11400000, guid: 4387ed79f3be74923be98b85afcd5bd8, type: 2}
+  - {fileID: 11400000, guid: 6f1ffc5ac31ce4d29ba030f9fb9960d7, type: 2}
   - {fileID: 11400000, guid: 20513756bfe5145e58b47ca71183bc23, type: 2}
   - {fileID: 11400000, guid: b463d8e861f694909845dd0d40ee0d96, type: 2}
   - {fileID: 11400000, guid: 9e2ee3e80d4284d1d9f19ff687195d96, type: 2}
@@ -2501,7 +2501,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.1981132, g: 0.16166785, b: 0.16166785, a: 1}
+  m_Color: {r: 0.098039225, g: 0.098039225, b: 0.098039225, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -9455,7 +9455,7 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 570
-    m_Data: {fileID: 11400000, guid: 6d9f6271504ed412fa15d3717a4e8584, type: 2}
+    m_Data: {fileID: 11400000, guid: 3def562d68e744cb8970cb444c67a3f4, type: 2}
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 38
@@ -9480,7 +9480,7 @@ Tilemap:
   - m_RefCount: 38
     m_Data: {fileID: 637829237}
   - m_RefCount: 570
-    m_Data: {fileID: 21300000, guid: 280504fbcfa10460e8f7a99791e0b56c, type: 3}
+    m_Data: {fileID: 21300000, guid: 7759e186a2bf4497c8d404552348362d, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 608
     m_Data:
@@ -9509,7 +9509,7 @@ Tilemap:
     m_Data: {r: 0.75227535, g: 0.31549475, b: 0.37071237, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 1}
   m_Origin: {x: -16, y: -294, z: 0}
   m_Size: {x: 32, y: 295, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -10003,7 +10003,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ccfd0fadd6da7964093b3313daee5273, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e4271364eb8a84d5d80cf1283fec5bba, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
