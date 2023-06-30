@@ -20,7 +20,7 @@ public class ScoreManager : MonoBehaviour
     void Update()
     {
         // Reached core
-        if(transform.position.y < -499) {
+        if(transform.position.y <= -500) {
             audioSource.PlayOneShot(sound);
         
             StartCoroutine(Tremble());
