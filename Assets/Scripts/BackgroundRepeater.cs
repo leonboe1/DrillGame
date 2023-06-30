@@ -45,7 +45,6 @@ public class BackgroundRepeater : MonoBehaviour
             if (transform.position.y <= yThresholds[i])
             {
                 drillMover.curveSpeed = curveSpeeds[i + 1];
-                break;
             }
 
         }

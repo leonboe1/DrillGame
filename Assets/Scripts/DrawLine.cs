@@ -8,7 +8,7 @@ public class DrawLine : MonoBehaviour
     public float lineWidth = 2f;
     private LineRenderer lineRenderer;
     private List<Vector3> linePositions = new List<Vector3>();
-    private Color darkBrown = new Color(0.15f, 0.15f, 0.15f);
+    private Color darkBrown = new Color(0.1f, 0.1f, 0.1f);
     private Camera mainCamera;
 
     void Start()
