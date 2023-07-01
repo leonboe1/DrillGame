@@ -8,6 +8,7 @@ public class ObstacleSpawner : MonoBehaviour
 {
     public GameObject bombPrefab;
     public GameObject binPrefab;
+    public GameObject rockPrefab;
     List<GameObject> obstacles = new List<GameObject>();
 
     public float spawnRate = 1f;
@@ -61,7 +62,9 @@ public class ObstacleSpawner : MonoBehaviour
         Vector3 spawnPosition = Camera.main.ViewportToWorldPoint(new Vector3(Random.Range(0.1f, 0.9f), 0, 10f));
         spawnPosition.y -= boxHeight;
 
-        GameObject box = Instantiate(Random.value > 0.5f ? bombPrefab : binPrefab, spawnPosition, Quaternion.identity);
+        float rand = Random.value;
+
+        GameObject box = Instantiate(rand < 0.3f ? bombPrefab : (rand < 0.6 ? binPrefab : rockPrefab), spawnPosition, Quaternion.identity);
 
         box.GetComponent<Collider2D>().enabled = true;
 
@@ -72,8 +75,6 @@ public class ObstacleSpawner : MonoBehaviour
 
         nextSpawnDepth -= 10f / spawnRate;
     }
-
-
 }
 
 

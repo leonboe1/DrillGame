@@ -1723,6 +1723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bombPrefab: {fileID: 3069315490649646457, guid: 8ab9fc7a8171c4ceab6a83eb075e92bf, type: 3}
   binPrefab: {fileID: 1666522362551890018, guid: 4301a2c885475414dace3c6832741fe7, type: 3}
+  rockPrefab: {fileID: 1666522362551890018, guid: 91d374cfabfd646d79ce020e68b0cc0e, type: 3}
   spawnRate: 3
   deleteAboveY: 10
 --- !u!114 &1187256018
