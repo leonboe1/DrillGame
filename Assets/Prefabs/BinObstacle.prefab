@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1371127779695145112}
   - component: {fileID: 1370152467293343491}
   - component: {fileID: 4405329348801958710}
-  - component: {fileID: 2431414086470795930}
+  - component: {fileID: 1341178862897577052}
   m_Layer: 0
   m_Name: BinObstacle
   m_TagString: Obstacle
@@ -113,8 +113,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &2431414086470795930
-CircleCollider2D:
+--- !u!70 &1341178862897577052
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -145,6 +145,6 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.026808739, y: -0.21447039}
-  serializedVersion: 2
-  m_Radius: 2.8478694
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 5.416666, y: 7.7999997}
+  m_Direction: 0

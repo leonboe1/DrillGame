@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1371127779695145112}
   - component: {fileID: 1370152467293343491}
   - component: {fileID: 4405329348801958710}
-  - component: {fileID: 603854547116541632}
+  - component: {fileID: -5388942634060027572}
   m_Layer: 0
   m_Name: StoneObstacle
   m_TagString: Obstacle
@@ -113,8 +113,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &603854547116541632
-CircleCollider2D:
+--- !u!70 &-5388942634060027572
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -146,5 +146,5 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 4.1049995
+  m_Size: {x: 10.262499, y: 10.099999}
+  m_Direction: 0
