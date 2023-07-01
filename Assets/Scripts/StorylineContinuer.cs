@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class StorylineContinuer : MonoBehaviour
 {
 
+    bool pressedBefore = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +18,12 @@ public class StorylineContinuer : MonoBehaviour
     void Update()
     {
         if(Input.GetKey(KeyCode.Space)) {
-            button_pressed();
+            pressedBefore = true;
+        }
+        else {
+            if(pressedBefore){
+                button_pressed();
+            }
         }
     }
 
